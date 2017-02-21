@@ -25,8 +25,8 @@ https://developer.xamarin.com/guides/testcloud/calabash/
 1. Checkout "automation" environment
    git clone http://username@git.spb.vipabc.com/scm/ttol/automation.git
 2. Execute calabash-sandbox in a Terminal session to initiate a sandbox environment and go to "automation" folder
-3. Copy your test artifacts to "binaries" folder and rename them to "VLiveShowProduction.apk" for android and "VLiveShowProduction.ipa" for iOS<br />
-(Note: Please make sure ipa file is archived after calabash framework linked meanwhile the Calabash framework must not be included in Release builds of the IPA.)
+3. Copy your test artifacts unto "binaries" folder and update config/devices.rb <br />
+(Note: Please make sure ipa file is archived after calabash framework linked meanwhile the Calabash framework must NOT be included in Release builds of the IPA.)
 4. Plug devices to your computer and make sure "Enable UI Automation" and "USB Debugging" is enabled with your ios/android device
 5. Edit config/devices.rb to update your device info:<br />
 "device" within "android_device" could be acquired by "adb devices" in terminal<br />

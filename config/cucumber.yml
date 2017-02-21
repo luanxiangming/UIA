@@ -16,10 +16,10 @@ formatter: -f <%= formatter %>
 
 # Launch on ios device.
 device_vars_ios:  PLATFORM=ios -r features/support -r features/ios/support -r features/ios/helpers -r features/steps -r features/ios/pages
-device_tags_ios:  --tags ~@android #~@simulator_only
+device_tags_ios:  --tags @ios #~@simulator_only
 ios:          -p device_vars_ios -p device_tags_ios -p formatter -v
 
 # Launch on android device.
 device_vars_android:  PLATFORM=android -r features/support -r features/android/support -r features/android/helpers -r features/steps -r features/android/pages
-device_tags_android:  --tags ~@ios #~@simulator_only
+device_tags_android:  --tags @android #~@simulator_only
 android:       -p device_vars_android -p device_tags_android -p formatter -v
