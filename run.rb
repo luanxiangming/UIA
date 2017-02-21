@@ -47,6 +47,8 @@ elsif target == 'ios'
   # Install ipa
   # system("ideviceinstaller --udid #{IOS_DEVICE} --install #{IPA}")
   system("#{IOS_ARGS} DEBUG=1 bundle exec cucumber -p #{target}")
+elsif target == 'sim'
+  system("DEBUG=1 bundle exec cucumber -p #{target}")
 else
   puts "Invalid target #{target}"
 end

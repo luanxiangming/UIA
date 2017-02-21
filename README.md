@@ -1,6 +1,7 @@
 # Requirements and Preparations
 
-1. Ruby 2.0 or higher must be installed on OS X or Windows.
+1. Ruby 2.0 or higher must be installed on OS X or Windows.<br />
+UPDATE: MacOS built-in ruby cannot support latest calabash-ios now. Latest ruby version is recommended which could be managed by rbenv(https://sanwen8.cn/p/1f1O4TQ.html) which could be acquired via brew(https://brew.sh/). <br />
 2. Development Environment<br />
 iOS: XCode 6.3 or higher. You must also have your iOS signing certificates and distribution profiles for creating an IPA setup on your computer. <br />
 Android:  you already have your computer configured for Android application development, and that you are using Android Studio 1.2.1.1 or higher. You must have the ANDROID_HOME environment variable set.
@@ -47,9 +48,11 @@ features/ios/pages: implementation of each page on iOS
 1. Run test cases: <br />
     ios: run.rb ios <br />
     android: run.rb android <br />
+    ios simulator: run.rb sim <br />
 2. (Optional)Enter console mode <br />
     ios: console.rb ios <br />
     android: console.rb android <br />
+    ios simulator: console.rb sim <br />
 
 <br />
 <br />

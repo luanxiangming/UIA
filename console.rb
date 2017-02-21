@@ -46,6 +46,8 @@ elsif target == 'ios'
   # Install ipa
   # system("ideviceinstaller --udid #{IOS_DEVICE} --install #{IPA}")
   system("#{IOS_ARGS} DEBUG=1 bundle exec calabash-ios console")
+elsif target == 'sim'
+  system("DEBUG=1 bundle exec calabash-ios console")
 else
   puts "Invalid target #{target}"
 end
