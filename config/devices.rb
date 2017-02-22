@@ -1,6 +1,7 @@
 DEVICES = {
     android_device: {
-        device: 'b86ec82', #VIVO X7
+        # device: 'b86ec82', #VIVO X7
+        device: '85GBBMC22KEE', #MEIZU
         # device: 'X2P0215921003304', #HUAWEI P8
         apk: 'binaries/app-vliveshow-release.apk'
     },

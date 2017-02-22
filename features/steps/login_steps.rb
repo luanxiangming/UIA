@@ -13,7 +13,7 @@ end
 end
 
 那么(/^用户会被提示当前手机号未注册$/) do
-  @current_page = page(LoginPage).await(timeout:30)
+  @current_page = page(CaptchaPage).await(timeout:30)
   @current_page.AssertUnregisteredNumber
 end
 

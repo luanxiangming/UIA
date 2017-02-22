@@ -23,10 +23,6 @@ class LoginPage < Calabash::ABase
     tap_mark "btn_next"
   end
 
-  def AssertUnregisteredNumber
-    wait_for_elements_exist "* text:'手机号未注册'"
-  end
-
   def LoginViaPhone phone
 
     clear_text "edit_phone"
@@ -40,6 +36,21 @@ class LoginPage < Calabash::ABase
 
     # wait_for_login_done
   end
+end
+
+
+class CaptchaPage < Calabash::ABase
+
+  def trait
+    "* id:'vcode_layout'"
+  end
+
+  def AssertUnregisteredNumber
+    wait_for_elements_exist "* marked:'vcode_layout'"
+    wait_for_elements_exist "* marked:'imv_back'"
+    tap_mark "imv_back"
+  end
+
 end
 
 class PasswordPage < Calabash::ABase
@@ -65,7 +76,8 @@ class PasswordPage < Calabash::ABase
   end
 
   def assertErrorMsg
-    wait_for_elements_exist("* text:'Wrong username or password'")
+    wait_for_elements_exist("* text:'账号或密码无效'")
   end
 
 end
+
